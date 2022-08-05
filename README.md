@@ -17,7 +17,7 @@ Confirmed to be working by user devkicks on a VAIO All in one VPCL11M1E, identif
 # Install required packages
 
 ```
-apt-get install dkms build-essential autoconf2.13 xorg-dev xserver-xorg-dev xutils-dev libgrail-dev autoconf libtool lib32z1 lib32ncurses5 libc6-i386
+sudo apt-get install dkms build-essential autoconf2.13 xorg-dev xserver-xorg-dev xutils-dev libgrail-dev autoconf libtool lib32z1 lib32ncurses5 libc6-i386
 ```
 
 # Build and patch original nwfermi driver
@@ -25,43 +25,44 @@ apt-get install dkms build-essential autoconf2.13 xorg-dev xserver-xorg-dev xuti
 - Get latest deb from https://launchpad.net/nwfermi/trunk/0.6.5/+download/nwfermi-0.6.5.0_amd64.deb
 - Extract deb
 ```
-# dpkg -x nwfermi-0.6.5.0_amd64.deb nwfermi
+sudo dpkg -x nwfermi-0.6.5.0_amd64.deb nwfermi
 ```
 - Copy nwfermi source to /usr/src
 ```
-# cp -p -r nwfermi/usr/src/nwfermi-0.6.5.0 /usr/src/
+sudo cp -p -r nwfermi/usr/src/nwfermi-0.6.5.0 /usr/src/
 ```
 - Apply patch
 ```
-# cd /usr/src/nwfermi-0.6.5.0/
-# patch -p1 < nw-fermi.c.patch
+sudo cp -p nw-fermi.c.patch /usr/src/nwfermi-0.6.5.0/
+sudo cd /usr/src/nwfermi-0.6.5.0/
+sudo patch -p1 < nw-fermi.c.patch
 ```
 - Make module
 ```
-# dkms build nwfermi/0.6.5.0
+sudo dkms build nwfermi/0.6.5.0
 ```
 - Install module
 ```
-# dkms install nwfermi/0.6.5.0
+sudo dkms install nwfermi/0.6.5.0
 ```
 
 # nwfermi user space daemon
 
 - Copy daemon from deb to /usr/sbin
 ```
-# cp nwfermi/usr/sbin/nwfermi_daemon /usr/sbin
+sudo cp nwfermi/usr/sbin/nwfermi_daemon /usr/sbin
 ```
 - Install udev rules from this git repo
 ```
-# cp etc/udev/rules.d/40-nw-fermi.rules /etc/udev/rules.d/
+sudo cp etc/udev/rules.d/40-nw-fermi.rules /etc/udev/rules.d/
 ```
 - Install systemd service file from this git repo
 ```
-# cp etc/systemd/system/nwfermi@.service /etc/systemd/system/
+sudo cp etc/systemd/system/nwfermi@.service /etc/systemd/system/
 ```
 - Reload systemd
 ```
-# systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
 # Rebuild xf86-input-nextwindow Xorg module
@@ -69,19 +70,19 @@ apt-get install dkms build-essential autoconf2.13 xorg-dev xserver-xorg-dev xuti
 - Download xf86-input-nextwindow_0.3.4~precise1.tar.gz from https://launchpad.net/~djpnewton/+archive/ubuntu/xf86-input-nextwindow/+packages
 - Extract and compile
 ```
-# chmod +x autogen.sh ; ./autogen.sh
-# make
-# make install
+sudo chmod +x autogen.sh ; ./autogen.sh
+sudo make
+sudo make install
 ```
 - Install module
 ```
-# cp /usr/local/lib/xorg/modules/input/nextwindow_drv.* /usr/lib/xorg/modules/input/
+sudo cp /usr/local/lib/xorg/modules/input/nextwindow_drv.* /usr/lib/xorg/modules/input/
 ```
 
 # Add Xorg configuration
 - Copy Xorg config from this git repo
 ```
-# cp etc/X11/xorg.conf.d/10-nwfermi.conf /etc/X11/xorg.conf.d/
+sudo cp etc/X11/xorg.conf.d/10-nwfermi.conf /etc/X11/xorg.conf.d/
 ```
 
 # Add your local user to the input group
@@ -90,8 +91,8 @@ To be able to read the input device your local user should be part of the *input
 Optionally, you should/can add the gdm user to this group as well
 
 ```
-# usermod -a -G input gdm
-# usermod -a -G input your_username
+sudo usermod -a -G input gdm
+sudo usermod -a -G input ryan
 ```
 
 # Reboot

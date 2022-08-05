@@ -1,0 +1,25 @@
+xf86-input-nextwindow (0.3.3~precise1) precise; urgency=low
+
+  * remove grail code
+
+ -- Daniel Newton <djpnewton@gmail.com>  Fri, 10 Jun 2011 12:30:00 +1200
+
+xf86-input-nextwindow (0.3.2) natty; urgency=low
+
+  * remove package dependency on libutouch-grail1
+
+ -- Daniel Newton <djpnewton@gmail.com>  Fri, 10 Jun 2011 12:30:00 +1200
+
+xf86-input-nextwindow (0.3.1) natty; urgency=low
+
+  * Update grails support
+    - Refreshed grail gestures code
+    - Bump runtime dependency on libutouch-grail1 to 1.0.19
+
+ -- Daniel Newton <djpnewton@gmail.com>  Fri, 10 Jun 2011 12:30:00 +1200
+
+xf86-input-nextwindow (0.3.0) natty; urgency=low
+
+  * Support for X ABI 12
+
+ -- Daniel Newton <djpnewton@gmail.com>  Thu, 12 May 2011 15:30:12 +1200

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/main/!svn/ver/24176/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian
+END
+compat
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/compat
+END
+changelog
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/main/!svn/ver/24176/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/changelog
+END
+copyright
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/copyright
+END
+docs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/docs
+END
+rules
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/rules
+END
+README.source
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/README.source
+END
+xf86-input-nextwindow.dirs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/xf86-input-nextwindow.dirs
+END
+README.Debian
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/README.Debian
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/main/!svn/ver/23266/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/control
+END
+xf86-input-nextwindow.install
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/main/!svn/ver/22205/1950_driver/branches/FourEyes/install_linux/xf86-input-nextwindow/debian/xf86-input-nextwindow.install
+END

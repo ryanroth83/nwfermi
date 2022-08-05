@@ -1,0 +1,15 @@
+Source: xf86-input-nextwindow
+Priority: extra
+Maintainer: daniel newton <djpnewton@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), autoconf, automake, xutils-dev, xserver-xorg-dev, libtool, pkg-config, libutouch-grail-dev (>= 1.0.10)
+Standards-Version: 3.8.4
+Section: libs
+Homepage: https://launchpad.net/nwfermi
+#Vcs-Git: git://git.debian.org/collab-maint/xf86-input-nextwindow.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/xf86-input-nextwindow.git;a=summary
+
+Package: xf86-input-nextwindow
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, xserver-xorg-core
+Description: Nextwindow Xorg input driver for nwfermi
